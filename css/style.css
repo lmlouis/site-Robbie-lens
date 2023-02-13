@@ -1,0 +1,374 @@
+/* 
+    Google Font 
+    importer Montserra et Manrope
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;600;700&display=swap');
+
+/* Reinitialiser les maarges par defaut */
+* {
+    margin: 0;
+    
+}
+
+/* 
+ajouter un paddingau  header  et au  footer  de  20px  en haut et en bas, et de  50px  à gauche et à droite 
+ */
+html{
+  width:100%;
+}
+
+header{
+   position: relative;
+   top:0;
+ }
+
+ footer{
+  position: relative;
+  bottom: 0;
+ } 
+/*
+Mettre les éléments du body avec un style par defaut
+ */
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 1em;
+    background-color: #1F2039; 
+}
+/* 
+les titres H1 :
+
+    3.5em  
+
+    en couleur  #A5B4FC  
+
+    police Montserrat
+ */
+h1{
+    font-size: 3.5em;
+    color: #A5B4FC;
+    font-family: 'Montserrat';
+    padding: 0;
+   
+}
+/* 
+les paragraphes :
+
+    1.1em 
+
+    police Manrope
+ */
+p{
+    font-size: 1.1em;
+    font-family: 'Manrope';
+}
+
+/* 
+les listes :
+
+    1em
+
+    police Manrope
+ */
+ li, ul, ol{
+    font-size: 1em;
+    font-family: 'Manrope';
+ }
+
+ /*
+ les liens :
+
+    enlever le soulignement
+
+    1em
+
+    police Manrope 
+  */
+a{
+    color: #242424;
+    text-decoration: none;
+    font-size: 1.em;
+    font-family: 'Manrope';
+}
+
+/* 
+Remplacer les  <span class="important"></span>  par des éléments  em  tout en gardant le même style.
+ */
+
+em {
+    color: #a5b4fc;
+    font-style: normal;
+}
+
+
+ /* 
+ changer les couleurs de fond pour que :
+
+la  div  dans laquelle on a les liens en haut des pages, et le pied de page, aient un fond blanc,
+
+le cœur de la page ait un fond correspondant à  #1F2039 ;
+
+et les couleurs de texte pour que :
+
+les liens en tête et pied de page soient de couleur  #242424 ,
+
+les paragraphes, les listes et les titres H2 soient de la couleur  #F9F8FF  (sur fond bleu foncé).
+
+ nav.navigation, footer.pied-page{
+*/
+
+header , footer{
+    background-color: white;
+    color: #242424 ;
+    padding: 2em;
+    
+  }
+
+  /* 
+  donner à vos sections (pour les futures sections à venir) un padding de  80px 
+   */
+
+section{
+    padding: 80px;
+}
+
+  p, li, ul, ol, h2{
+    color: #F9F8FF;
+  }
+
+  /* 
+  liens hypertextes qui ont été ajoutés : "Un projet ? Écrivez-moi" et "Voir mon portfolio".
+   Vous devrez leur ajouter un dégradé qui passe de la couleur  #8E86B5  à la couleur  #ACAEED  
+   et les mettre dans la police Montserrat, en blanc.
+   */
+
+.btn{
+    background: linear-gradient(#8E86B5, #ACAEED);
+    font-family: 'Montesrrat';
+    color: #F9F8FF;
+    padding: 1em;
+    border-radius: 50px;
+  }
+
+  /* 
+  créer une  div , sur la page À propos, qui englobe le paragraphe 
+   la liste de compétences de Robbie Lens ; lui ajouter une bordure à 
+   droite et en bas, de  1px  d'épaisseur et de la couleur  #A5B4FC
+   */
+
+   section.contenu{
+    width: 60%;
+    margin: auto;
+   }
+  .carre-contenu{
+    border-right: 1px solid #A5B4FC;
+    border-bottom: 1px solid #A5B4FC;
+    margin-bottom: 2em;
+    padding:10px; 
+  }
+
+  .carre-contenu h2 {
+    margin-top: 30px;
+  }
+  
+  .carre-contenu ul {
+    margin-top: 30px;
+  }
+
+  .a-propos-main {
+    width: 65%;
+    margin: auto;
+  }
+
+  /*
+  -  souligner les liens au survol ;
+  - permettre aux liens ayant la classe "btn" d'avoir un dégradé de la couleur  
+    #696484  à la couleur  #8788BA  au survol 
+    (attention, ceux-ci ne sont pas soulignés au survol) ;
+  - dans les icônes de l'en-tête et du pied-de-page qui permettent de faire 
+    des liens, réduire l'opacité à 0.5 au survol.
+ */
+/* transformer les liens qui ont la classe  .btn  en éléments  inline-block  avec  display  sur les pages 
+"Accueil" et "À propos", et ajouter leur lien vers la page "Portfolio" ; */
+ a.btn{
+  display: inline-block;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+
+.btn:hover {
+    text-decoration: none;
+    background: linear-gradient(#696484,#8788BA);
+ }
+
+
+ .reseau-sociaux{
+    list-style: none;
+ }
+
+.reseau-sociaux{
+    opacity: 1;
+ }
+
+a.reseau-sociaux:hover{
+    opacity: 0.5;
+ }
+/* utiliser  flex  pour avoir le logo en haut à gauche de la page, et les liens de navigation à droite dans l’en-tête ; */
+ .navigation, .pied-page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
+ nav a, footer a {
+  margin-left: 30px;
+}
+
+ /* 
+ réagencer les éléments pour avoir le titre de la page d'accueil, 
+ le paragraphe, et le lien ayant la classe "btn" à gauche, et la photo à droite ; */
+
+
+
+/* importer les images dans la page d'accueil, et créer une grille d'images avec deux rangées de 3 images chacune. */
+ .accueil-photos {
+  background-color: white;
+  padding: 80px;
+}
+
+ .accueil-photos h2 {
+  color: #242424;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.accueil-photos div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.accueil-introduction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 65%;
+  margin: auto;
+}
+
+.accueil-introduction p{
+  margin-bottom:30px;
+}
+
+
+
+/* 
+une première grid avec les images dont le nom commence par "paysage". Elle comprend 3 colonnes et 3 rangées ;
+ */
+
+ .portfolio-section-photos {
+  background-color: white;
+}
+
+.portfolio-section-photos h2 {
+  color: #242424;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.grid-paysages{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  /*  3 colones  */
+  grid-template-rows: 300px 300px 300px;  /*  2 rangées   */
+  gap: 15px;  /*  espace entres chaque box    */
+}
+
+/* 
+une deuxième grid de 3 colonnes et 2 rangées, avec les images dont le nom commence par "portrait". */
+.grid-portraits{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 15px;
+}
+ 
+.box-paysage,
+.box-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* créer sur les images un effet au survol de la souris en affichant un élément (grâce à display ) qui :
+
+aura un fond noir d’une opacité de  70%  ;
+
+s’affichera par-dessus l’image, et y mentionnera le texte suivant : “Voir la photo”, comme ceci : */
+.lien-conteneur-photo {
+  position: relative;
+}
+
+.photo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.lien-conteneur-photo:hover .photo-hover {
+  display: flex;
+}
+
+
+/* Media Queries  */
+
+/* 
+Cachez la section "Tarifs" sur la page "À propos".
+
+Tous les éléments qui sont disposés à l'horizontale basculent à la verticale à partir de la taille d'écran  996px  (introduction, grilles photos et formulaire).
+
+Le  padding  sur le côté des pages passe de  80px  à  20px  .
+
+Les liens de navigation du header passent à la verticale et sont centrés. */
+
+@media screen and (max-width:996px) {
+  .navigation, .pied-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav img {
+    margin-bottom: 20px;
+  }
+
+  header,
+  footer {
+    padding: 20px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 50px 20px 50px 20px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+}

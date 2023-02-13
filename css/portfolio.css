@@ -1,0 +1,10 @@
+@media screen and (max-width:996px) {
+    /* Tous les éléments qui sont disposés à l'horizontale basculent à la verticale à 
+    partir de la taille d'écran  996px  (introduction, grilles photos et formulaire). */
+    .grid-paysages, .grid-portraits{
+     display: flex;
+     flex-direction: column;
+    }
+
+
+}

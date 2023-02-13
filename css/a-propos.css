@@ -1,0 +1,48 @@
+.carre-contenu {
+    border-right: 1px solid #8e86b5;
+    border-bottom: 1px solid #8e86b5;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  
+  
+  .carre-contenu + div,  h2,h1, .btn {
+    text-align: center;
+  }
+  
+table{
+    border-collapse: collapse;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+h2,h1, .btn{
+    padding: 0;
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+}
+td,th{ 
+    vertical-align: middle;
+    padding: 3em;
+}
+
+td, th{
+    
+    border: 1px solid white;
+    
+}
+
+.carre-contenu{
+    width: 100%;
+    margin-top: 0;
+}
+@media screen and (max-width:996px) {
+
+    /* Cachez la section "Tarifs" sur la page "À propos". */
+    section.Tarifs{
+        display: none;
+    }
+}
+
